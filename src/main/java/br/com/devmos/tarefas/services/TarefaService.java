@@ -1,5 +1,7 @@
 package br.com.devmos.tarefas.services;
 
+import java.util.List;
+
 import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,6 +29,10 @@ public class TarefaService {
 	@Transactional
 	public void salvar(Tarefa tarefa) {
 		tarefaRepository.save(tarefa);
+	}
+
+	public List<Tarefa> buscarTodasTarefas() {
+		return tarefaRepository.findAll();
 	}
 
 }
