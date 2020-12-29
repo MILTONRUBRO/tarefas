@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
 import br.com.devmos.tarefas.models.Tarefa;
+import br.com.devmos.tarefas.models.TarefaDTO;
 import br.com.devmos.tarefas.repositories.TarefaRepository;
 
 @Service
@@ -31,8 +32,8 @@ public class TarefaService {
 		tarefaRepository.save(tarefa);
 	}
 
-	public List<Tarefa> buscarTodasTarefas() {
-		return tarefaRepository.findAll();
+	public List<TarefaDTO> buscarTodasTarefas() {
+		return TarefaDTO.converte(tarefaRepository.findAll());
 	}
 
 }

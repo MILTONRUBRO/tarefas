@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.devmos.tarefas.models.Tarefa;
+import br.com.devmos.tarefas.models.TarefaDTO;
 import br.com.devmos.tarefas.models.TarefaRequest;
 import br.com.devmos.tarefas.services.TarefaService;
 
@@ -35,7 +36,7 @@ public class TarefaController {
 	}
 	
 	@GetMapping
-	public List<Tarefa> getTarefas(){
+	public List<TarefaDTO> getTarefas(){
 		return tarefaService.buscarTodasTarefas();
 	}
 
