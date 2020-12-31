@@ -11,6 +11,8 @@ import {Tarefa} from './tarefa'
 export class AppComponent {
   title = 'front-end';
 
+  tarefas: Tarefa[] = [];
+
   form: FormGroup = new FormGroup({
     description : new FormControl('')
   })
@@ -24,6 +26,9 @@ export class AppComponent {
     const tarefa: Tarefa = {... this.form.value};
     this.service
         .salvar(tarefa)
-        .subscribe(tarefa => console.log(tarefa));
+        .subscribe(tarefaSalva => {
+          this.tarefas.push(tarefaSalva);
+          this.form.reset();
+        })
   }
 }
