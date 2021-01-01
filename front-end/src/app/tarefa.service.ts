@@ -15,4 +15,8 @@ export class TarefaService {
   salvar(tarefa: Tarefa) : Observable<Tarefa> {
     return this.http.post<Tarefa>(this.apiURL, tarefa);
   }
+
+  listar() : Observable<Tarefa[]>{
+    return this.http.get<Tarefa[]>(this.apiURL);
+  }
 }
