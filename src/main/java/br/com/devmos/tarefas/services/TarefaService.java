@@ -35,5 +35,11 @@ public class TarefaService {
 	public List<TarefaDTO> buscarTodasTarefas() {
 		return TarefaDTO.converte(tarefaRepository.findAll());
 	}
+	
+	@Transactional
+	public void deletar(Long id) {
+		Tarefa tarefa = buscaPorId(id);
+		tarefaRepository.deleteById(tarefa.getId());
+	}
 
 }

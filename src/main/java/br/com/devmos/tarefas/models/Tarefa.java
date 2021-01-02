@@ -20,7 +20,10 @@ public class Tarefa {
 	private Boolean finalizada;
 	private LocalDateTime dataCriacao;
 	private LocalDateTime dataFinalizacao;
-
+	
+	public Long getId() {
+		return id;
+	}
 
 	public String getDescricao() {
 		return descricao;
