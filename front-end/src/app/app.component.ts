@@ -22,6 +22,10 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(){
+    this.listarTarefas();
+  }
+
+  listarTarefas(){
     this.service.listar().subscribe(tarefaList => this.tarefas = tarefaList);
   }
 
@@ -34,5 +38,11 @@ export class AppComponent implements OnInit {
           this.tarefas.push(tarefaSalva);
           this.form.reset();
         })
+  }
+
+  delete(tarefa: Tarefa){
+    this.service.deletar(tarefa.id).subscribe({
+      next: (response) => this.listarTarefas()
+    })
   }
 }

@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Tarefa } from './tarefa';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
+import { ThrowStmt } from '@angular/compiler';
 
 @Injectable({
   providedIn: 'root'
@@ -18,5 +19,10 @@ export class TarefaService {
 
   listar() : Observable<Tarefa[]>{
     return this.http.get<Tarefa[]>(this.apiURL);
+  }
+
+  deletar(id: number) : Observable<void> {
+    const url = `${this.apiURL}/${id}`;
+    return this.http.delete<void>(url);
   }
 }
