@@ -1,5 +1,6 @@
 package br.com.devmos.tarefas.services;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 import javax.transaction.Transactional;
@@ -40,6 +41,16 @@ public class TarefaService {
 	public void deletar(Long id) {
 		Tarefa tarefa = buscaPorId(id);
 		tarefaRepository.deleteById(tarefa.getId());
+	}
+	
+	@Transactional
+	public Tarefa atualizarTarefa(Long id) {
+		Tarefa tarefa = buscaPorId(id);
+		tarefa.setId(id);
+		tarefa.setFinalizada(true);
+		tarefa.setDataFinalizacao(LocalDateTime.now());
+		
+		return tarefaRepository.save(tarefa);
 	}
 
 }
