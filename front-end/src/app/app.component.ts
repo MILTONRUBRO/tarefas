@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import {TarefaService} from './tarefa.service'
 import {Tarefa} from './tarefa'
 
@@ -14,7 +14,7 @@ export class AppComponent implements OnInit {
   tarefas: Tarefa[] = [];
 
   form: FormGroup = new FormGroup({
-    description : new FormControl('')
+    description : new FormControl('', [Validators.required, Validators.minLength(4)])
   })
 
   constructor(private service : TarefaService){
