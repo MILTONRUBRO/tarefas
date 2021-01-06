@@ -25,4 +25,10 @@ export class TarefaService {
     const url = `${this.apiURL}/${id}`;
     return this.http.delete<void>(url);
   }
+
+  marcarComoConcluido(id: number) : Observable<Tarefa>{
+    const url = `${this.apiURL}/${id}/done`
+    return this.http.patch<Tarefa>(url, {});
+
+  }
 }

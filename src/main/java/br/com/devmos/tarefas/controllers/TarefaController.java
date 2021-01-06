@@ -49,7 +49,7 @@ public class TarefaController {
 		tarefaService.deletar(id);
 	}
 	
-	@PatchMapping("{id}")
+	@PatchMapping("{id}/done")
 	public Tarefa updateTarefa(@PathVariable("id") Long id) {
 		return tarefaService.atualizarTarefa(id);
 	} 

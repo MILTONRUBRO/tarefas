@@ -45,4 +45,13 @@ export class AppComponent implements OnInit {
       next: (response) => this.listarTarefas()
     })
   }
+
+  done(tarefa: Tarefa){
+    this.service.marcarComoConcluido(tarefa.id).subscribe({
+      next: (tarefaAtualizada) => {
+        tarefa.finalizada = tarefaAtualizada.finalizada;
+        tarefa.dataFinalizacao = tarefaAtualizada.dataFinalizacao;
+      }
+    });
+  }
 }
