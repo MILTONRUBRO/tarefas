@@ -2,6 +2,7 @@ package br.com.devmos.tarefas.services;
 
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Optional;
 
 import javax.transaction.Transactional;
 
@@ -51,6 +52,16 @@ public class TarefaService {
 		tarefa.setDataFinalizacao(LocalDateTime.now());
 		
 		return tarefaRepository.save(tarefa);
+	}
+	
+	public Tarefa buscarTarefaPelaDescricao(String descricao) {
+		 Optional<Tarefa> possivelTarefa = tarefaRepository.findByDescricao(descricao);
+		 
+		 if(!possivelTarefa.isPresent()) {
+			 throw new ResponseStatusException(HttpStatus.NOT_FOUND); 
+		 }
+		 
+		 return possivelTarefa.get();
 	}
 
 }
