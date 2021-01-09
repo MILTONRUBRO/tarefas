@@ -8,10 +8,10 @@
     <form [formGroup]="form" (ngSubmit)="submit()">
         <div class="row" >
             <div class="col-md-6">
-                <input type="text" class="form-control" formControlName='description'>
+                <input type="text" class="form-control" formControlName='descricao'>
             </div>
             <div class="col-md-1">
-                <button type="submit" [disabled]="!form.get('description').valid" 
+                <button type="submit" [disabled]="!form.get('descricao').valid" 
                     class="btn btn-primary">Add
                 </button>
             </div>
@@ -24,10 +24,13 @@
                 <li *ngFor="let tarefa of tarefas" 
                     class="list-group-item d-flex justify-content-between align-item-center">
                     
-                    <span class="{{tarefa.finalizada ? 'done' : ''}}">
+ <!--                   <span class="{{tarefa.finalizada ? 'done' : ''}}">
                         {{tarefa.descricao}}
                         {{tarefa.dataFinalizacao}}
-                    </span>
+                    </span>-->
+
+                    {{tarefa.descricao}}
+                    {{tarefa.dataFinalizacao}}
 
                     <div class="btn-group">
                         <button class="btn btn-success" 

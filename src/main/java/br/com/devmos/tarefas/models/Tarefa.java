@@ -68,5 +68,10 @@ public class Tarefa {
 		this.dataCriacao = LocalDateTime.now();		
 		this.dataFinalizacao = dataFinalizacao;
 	}
+	
+	@Deprecated
+	public Tarefa() {
+		
+	}
 
 }

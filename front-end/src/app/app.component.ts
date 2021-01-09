@@ -14,7 +14,7 @@ export class AppComponent implements OnInit {
   tarefas: Tarefa[] = [];
 
   form: FormGroup = new FormGroup({
-    description : new FormControl('', [Validators.required, Validators.minLength(4)])
+    descricao : new FormControl('', [Validators.required, Validators.minLength(4)])
   })
 
   constructor(private service : TarefaService){
@@ -27,6 +27,7 @@ export class AppComponent implements OnInit {
 
   listarTarefas(){
     this.service.listar().subscribe(tarefaList => this.tarefas = tarefaList);
+    console.log(this.tarefas);
   }
 
   submit(){

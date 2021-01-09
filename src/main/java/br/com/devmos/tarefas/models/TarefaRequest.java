@@ -8,7 +8,7 @@ public class TarefaRequest {
 	
 	@NotBlank
 	private String descricao;
-	private Boolean finalizada;
+	private Boolean finalizada = false;
 	private LocalDateTime dataFinalizacao;
 	
 	public String getDescricao() {
