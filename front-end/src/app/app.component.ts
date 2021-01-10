@@ -8,7 +8,7 @@ import {Tarefa} from './tarefa'
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   title = 'front-end';
 
   tarefas: Tarefa[] = [];
@@ -26,8 +26,10 @@ export class AppComponent implements OnInit {
   }
 
   listarTarefas(){
-    this.service.listar().subscribe(tarefaList => this.tarefas = tarefaList);
-    console.log(this.tarefas);
+    this.service.listar().subscribe(tarefaList => {
+      console.log(tarefaList);
+      this.tarefas = tarefaList
+    });
   }
 
   submit(){
