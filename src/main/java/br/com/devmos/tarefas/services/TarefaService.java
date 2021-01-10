@@ -30,8 +30,9 @@ public class TarefaService {
 	}
 	
 	@Transactional
-	public void salvar(Tarefa tarefa) {
-		tarefaRepository.save(tarefa);
+	public Tarefa salvar(Tarefa tarefa) {
+		 tarefaRepository.save(tarefa);
+		 return tarefa;
 	}
 
 	public List<TarefaDTO> buscarTodasTarefas() {

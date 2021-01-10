@@ -29,9 +29,9 @@ public class TarefaController {
 	private TarefaService tarefaService;
 	
 	@PostMapping
-	public void save(@RequestBody  @Valid TarefaRequest request) {
+	public Tarefa save(@RequestBody  @Valid TarefaRequest request) {
 		Tarefa tarefa = request.toModel();
-		tarefaService.salvar(tarefa);
+		return tarefaService.salvar(tarefa);
 	}
 	
 	@GetMapping("{id}")
