@@ -50,6 +50,7 @@ export class AppComponent {
   }
 
   done(tarefa: Tarefa){
+    console.log(tarefa.id);
     this.service.marcarComoConcluido(tarefa.id).subscribe({
       next: (tarefaAtualizada) => {
         tarefa.finalizada = tarefaAtualizada.finalizada;
