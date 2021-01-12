@@ -64,5 +64,9 @@ public class TarefaService {
 		 
 		 return possivelTarefa.get();
 	}
+	
+	public List<Tarefa> listarTarefasFinalizadas(){
+		return tarefaRepository.findAllDoneTarefas();
+	}
 
 }
