@@ -40,16 +40,16 @@ public class TarefaController {
 	}
 	
 	@GetMapping
-	public List<TarefaDTO> getTarefas(){
+	public List<Tarefa> getTarefas(){
 		return tarefaService.buscarTodasTarefas();
 	}
 	
-	@DeleteMapping("{id}")
+	@DeleteMapping("/{id}")
 	public void deletar(@PathVariable("id") Long id) {
 		tarefaService.deletar(id);
 	}
 	
-	@PatchMapping("{id}/done")
+	@PatchMapping("/{id}/done")
 	public Tarefa updateTarefa(@PathVariable("id") Long id) {
 		return tarefaService.atualizarTarefa(id);
 	} 

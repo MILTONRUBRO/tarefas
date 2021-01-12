@@ -10,6 +10,7 @@ public class TarefaDTO {
 	private Boolean finalizada;
 	private LocalDateTime dataCriacao;
 	private LocalDateTime dataFinalizacao;
+	private Long id;
 
 	public String getDescricao() {
 		return descricao;
@@ -48,6 +49,7 @@ public class TarefaDTO {
 		this.finalizada = tarefa.getFinalizada();
 		this.dataCriacao = tarefa.getDataCriacao();
 		this.dataFinalizacao = tarefa.getDataFinalizacao();
+		this.id = tarefa.getId();
 	}
 	
 	public static List<TarefaDTO> converte(List<Tarefa> tarefas) {

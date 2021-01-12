@@ -35,8 +35,8 @@ public class TarefaService {
 		 return tarefa;
 	}
 
-	public List<TarefaDTO> buscarTodasTarefas() {
-		return TarefaDTO.converte(tarefaRepository.findAll());
+	public List<Tarefa> buscarTodasTarefas() {
+		return tarefaRepository.findAll();
 	}
 	
 	@Transactional
