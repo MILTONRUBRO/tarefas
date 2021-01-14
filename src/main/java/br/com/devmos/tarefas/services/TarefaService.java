@@ -41,6 +41,7 @@ public class TarefaService {
 	}
 
 	public List<Tarefa> buscarTodasTarefas() {
+		Logger.info("Retornando todas as tarefas");
 		return tarefaRepository.findAll();
 	}
 	
@@ -56,7 +57,9 @@ public class TarefaService {
 		tarefa.setId(id);
 		tarefa.setFinalizada(true);
 		tarefa.setDataFinalizacao(LocalDateTime.now());
-		
+
+		Logger.info("Tarefa Atualizada");
+
 		return tarefaRepository.save(tarefa);
 	}
 	
@@ -75,6 +78,7 @@ public class TarefaService {
 	}
 	
 	public List<Tarefa> listarTarefasFinalizadas(){
+		Logger.info("Retornando todas as tarefas finalizadas");
 		return tarefaRepository.findAllDoneTarefas();
 	}
 
