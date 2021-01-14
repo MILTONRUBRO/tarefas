@@ -6,11 +6,14 @@ import java.util.Optional;
 
 import javax.transaction.Transactional;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
+import br.com.devmos.tarefas.TarefasApplication;
 import br.com.devmos.tarefas.models.Tarefa;
 import br.com.devmos.tarefas.models.TarefaDTO;
 import br.com.devmos.tarefas.repositories.TarefaRepository;
@@ -19,6 +22,8 @@ import br.com.devmos.tarefas.repositories.TarefaRepository;
 public class TarefaService {
 	
 	private TarefaRepository tarefaRepository;
+	
+	private static Logger Logger = LoggerFactory.getLogger(TarefasApplication.class);
 	
 	@Autowired
 	public TarefaService(TarefaRepository tarefaRepository) {
@@ -56,9 +61,13 @@ public class TarefaService {
 	}
 	
 	public Tarefa buscarTarefaPelaDescricao(String descricao) {
+		
+		Logger.info("Buscando uma tarefa pela descrição");
+		
 		 Optional<Tarefa> possivelTarefa = tarefaRepository.findByDescricao(descricao);
 		 
 		 if(!possivelTarefa.isPresent()) {
+			 Logger.info("Tarefa com a " + descricao + " não foi encontrada");
 			 throw new ResponseStatusException(HttpStatus.NOT_FOUND); 
 		 }
 		 
