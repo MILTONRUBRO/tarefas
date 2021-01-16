@@ -1,0 +1,71 @@
+2021-01-15 13:54:30,362 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.1.6.Final
+2021-01-15 13:54:30,502 INFO br.com.devmos.tarefas.TarefasApplication [restartedMain] Starting TarefasApplication on DESKTOP-TPA6QMR with PID 7160 (C:\Projetos\tarefas\target\classes started by milton in C:\Projetos\tarefas)
+2021-01-15 13:54:30,503 DEBUG br.com.devmos.tarefas.TarefasApplication [restartedMain] Running with Spring Boot v2.3.7.RELEASE, Spring v5.2.12.RELEASE
+2021-01-15 13:54:30,512 INFO br.com.devmos.tarefas.TarefasApplication [restartedMain] No active profile set, falling back to default profiles: default
+2021-01-15 13:54:30,771 INFO org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-01-15 13:54:30,771 INFO org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-01-15 13:54:32,367 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-01-15 13:54:32,477 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 96ms. Found 1 JPA repository interfaces.
+2021-01-15 13:54:33,616 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2021-01-15 13:54:33,631 INFO org.apache.coyote.http11.Http11NioProtocol [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2021-01-15 13:54:33,632 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2021-01-15 13:54:33,632 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-01-15 13:54:33,772 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2021-01-15 13:54:33,773 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 3001 ms
+2021-01-15 13:54:33,859 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2021-01-15 13:54:34,178 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2021-01-15 13:54:34,187 INFO org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration [restartedMain] H2 console available at '/h2'. Database available at 'jdbc:h2:file:~/h2tarefasdb'
+2021-01-15 13:54:34,427 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-01-15 13:54:34,537 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate ORM core version 5.4.25.Final
+2021-01-15 13:54:34,841 INFO org.hibernate.annotations.common.Version [restartedMain] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-01-15 13:54:35,064 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-01-15 13:54:36,042 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-01-15 13:54:36,054 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-01-15 13:54:36,087 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2021-01-15 13:54:36,917 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-01-15 13:54:37,133 INFO org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2021-01-15 13:54:37,500 INFO org.apache.coyote.http11.Http11NioProtocol [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2021-01-15 13:54:37,538 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2021-01-15 13:54:37,554 INFO br.com.devmos.tarefas.TarefasApplication [restartedMain] Started TarefasApplication in 7.639 seconds (JVM running for 8.648)
+2021-01-15 14:03:55,773 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-01-15 14:03:55,775 INFO org.springframework.web.servlet.DispatcherServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2021-01-15 14:03:55,820 INFO org.springframework.web.servlet.DispatcherServlet [http-nio-8080-exec-1] Completed initialization in 45 ms
+2021-01-15 14:03:55,923 INFO br.com.devmos.tarefas.TarefasApplication [http-nio-8080-exec-1] Retornando todas as tarefas
+2021-01-15 14:04:09,373 INFO br.com.devmos.tarefas.TarefasApplication [http-nio-8080-exec-5] Tarefa Atualizada
+2021-01-15 14:04:10,349 INFO br.com.devmos.tarefas.TarefasApplication [http-nio-8080-exec-8] Retornando todas as tarefas
+2021-01-15 16:05:40,928 INFO org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor [Thread-5] Shutting down ExecutorService 'applicationTaskExecutor'
+2021-01-15 16:05:40,934 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [Thread-5] Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-01-15 16:05:40,951 INFO com.zaxxer.hikari.HikariDataSource [Thread-5] HikariPool-1 - Shutdown initiated...
+2021-01-15 16:05:40,977 INFO com.zaxxer.hikari.HikariDataSource [Thread-5] HikariPool-1 - Shutdown completed.
+2021-01-15 16:05:41,281 INFO br.com.devmos.tarefas.TarefasApplication [restartedMain] Starting TarefasApplication on DESKTOP-TPA6QMR with PID 7160 (C:\Projetos\tarefas\target\classes started by milton in C:\Projetos\tarefas)
+2021-01-15 16:05:41,281 DEBUG br.com.devmos.tarefas.TarefasApplication [restartedMain] Running with Spring Boot v2.3.7.RELEASE, Spring v5.2.12.RELEASE
+2021-01-15 16:05:41,282 INFO br.com.devmos.tarefas.TarefasApplication [restartedMain] No active profile set, falling back to default profiles: default
+2021-01-15 16:05:41,697 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-01-15 16:05:41,715 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 17ms. Found 1 JPA repository interfaces.
+2021-01-15 16:05:42,003 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2021-01-15 16:05:42,004 INFO org.apache.coyote.http11.Http11NioProtocol [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2021-01-15 16:05:42,005 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2021-01-15 16:05:42,005 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-01-15 16:05:42,036 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2021-01-15 16:05:42,036 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 744 ms
+2021-01-15 16:05:42,078 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-2 - Starting...
+2021-01-15 16:05:42,096 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-2 - Start completed.
+2021-01-15 16:05:42,097 INFO org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration [restartedMain] H2 console available at '/h2'. Database available at 'jdbc:h2:file:~/h2tarefasdb'
+2021-01-15 16:05:42,179 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-01-15 16:05:42,218 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-01-15 16:05:42,424 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-01-15 16:05:42,425 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-01-15 16:05:42,433 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2021-01-15 16:05:42,627 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-01-15 16:05:42,715 INFO org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2021-01-15 16:05:42,876 INFO org.apache.coyote.http11.Http11NioProtocol [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2021-01-15 16:05:42,881 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2021-01-15 16:05:42,887 INFO br.com.devmos.tarefas.TarefasApplication [restartedMain] Started TarefasApplication in 1.73 seconds (JVM running for 7873.981)
+2021-01-15 16:05:42,891 INFO org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2021-01-15 18:33:33,686 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-01-15 18:33:33,690 INFO org.springframework.web.servlet.DispatcherServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2021-01-15 18:33:33,744 INFO org.springframework.web.servlet.DispatcherServlet [http-nio-8080-exec-1] Completed initialization in 54 ms
+2021-01-15 18:33:33,834 INFO br.com.devmos.tarefas.TarefasApplication [http-nio-8080-exec-1] Retornando todas as tarefas
+2021-01-15 18:34:28,576 INFO br.com.devmos.tarefas.TarefasApplication [http-nio-8080-exec-4] Retornando todas as tarefas
+2021-01-15 18:34:35,972 INFO br.com.devmos.tarefas.TarefasApplication [http-nio-8080-exec-6] Tarefa Atualizada
+2021-01-15 18:34:36,994 INFO br.com.devmos.tarefas.TarefasApplication [http-nio-8080-exec-9] Retornando todas as tarefas
