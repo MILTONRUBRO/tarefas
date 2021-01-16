@@ -1,3 +1,5 @@
 export const environment = {
-  production: true
+  production: true,
+  apiURL:'https://todo-api-mos.herokuapp.com/api/tarefas'
+  
 };

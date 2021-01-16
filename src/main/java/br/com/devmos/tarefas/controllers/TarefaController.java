@@ -21,7 +21,7 @@ import br.com.devmos.tarefas.models.TarefaRequest;
 import br.com.devmos.tarefas.services.TarefaService;
 
 @RestController
-@CrossOrigin("http://localhost:4200")
+@CrossOrigin("*")
 @RequestMapping("api/tarefas")
 public class TarefaController {
 	
