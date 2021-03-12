@@ -45,7 +45,10 @@ public class TarefaControllerTest {
 		mvc.perform(MockMvcRequestBuilders.get(URL + "/1")
 					.contentType(MediaType.APPLICATION_JSON)
 					.accept(MediaType.APPLICATION_JSON))
-			.andExpect(MockMvcResultMatchers.status().isOk());
+			.andExpect(MockMvcResultMatchers.status().isOk())
+			.andExpect(MockMvcResultMatchers.jsonPath("$.descricao").value(DESCRICAO))
+			.andExpect(MockMvcResultMatchers.jsonPath("$.finalizada").value(FINALIZADA));
+
 	}
 
 	private Tarefa getMockTarefa() {
