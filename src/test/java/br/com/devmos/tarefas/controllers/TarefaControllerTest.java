@@ -1,6 +1,7 @@
 package br.com.devmos.tarefas.controllers;
 
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -17,7 +18,11 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 import br.com.devmos.tarefas.models.Tarefa;
+import br.com.devmos.tarefas.models.TarefaRequest;
 import br.com.devmos.tarefas.services.TarefaService;
 
 @RunWith(SpringRunner.class)
@@ -49,6 +54,22 @@ public class TarefaControllerTest {
 			.andExpect(MockMvcResultMatchers.jsonPath("$.descricao").value(DESCRICAO))
 			.andExpect(MockMvcResultMatchers.jsonPath("$.finalizada").value(FINALIZADA));
 
+	}
+	
+	@Test
+	public void testSaveTarefa() throws Exception {
+		BDDMockito.given(tarefaService.salvar(Mockito.any(Tarefa.class))).willReturn(getMockTarefa());
+		
+		mvc.perform(MockMvcRequestBuilders.post(URL).content(getJsonPayLoad(DESCRICAO, FINALIZADA, DATA_FINALIZACAO))
+				.contentType(MediaType.APPLICATION_JSON))
+				.andExpect(MockMvcResultMatchers.status().isCreated());
+	}
+
+	private String getJsonPayLoad(String descricao, Boolean finalizada, LocalDateTime dataFinalizacao) throws JsonProcessingException {
+		TarefaRequest request = new TarefaRequest(descricao, finalizada, dataFinalizacao);
+		
+		ObjectMapper mapper = new ObjectMapper();
+		return mapper.writeValueAsString(request);
 	}
 
 	private Tarefa getMockTarefa() {

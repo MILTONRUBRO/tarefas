@@ -31,6 +31,13 @@ public class TarefaRequest {
 		this.dataFinalizacao = dataFinalizacao;
 	}
 	
+	public TarefaRequest(@NotBlank String descricao, Boolean finalizada, LocalDateTime dataFinalizacao) {
+		this.descricao = descricao;
+		this.finalizada = finalizada;
+		this.dataFinalizacao = dataFinalizacao;
+	}
+	
+	
 	public Tarefa toModel() {
 		return new Tarefa(this.descricao, this.finalizada, this.dataFinalizacao);
 	}
